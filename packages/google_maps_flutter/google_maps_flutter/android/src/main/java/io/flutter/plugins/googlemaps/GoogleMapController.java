@@ -508,6 +508,10 @@ final class GoogleMapController
   }
 
   private void setGoogleMapListener(@Nullable GoogleMapListener listener) {
+    if (googleMap == null) {
+      return;
+    }
+
     googleMap.setOnCameraMoveStartedListener(listener);
     googleMap.setOnCameraMoveListener(listener);
     googleMap.setOnCameraIdleListener(listener);
