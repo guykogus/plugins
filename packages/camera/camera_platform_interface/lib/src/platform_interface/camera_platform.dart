@@ -1,4 +1,4 @@
-// Copyright 2018 The Chromium Authors. All rights reserved.
+// Copyright 2013 The Flutter Authors. All rights reserved.
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -233,6 +233,16 @@ abstract class CameraPlatform extends PlatformInterface {
   /// when an illegal zoom level is supplied.
   Future<void> setZoomLevel(int cameraId, double zoom) {
     throw UnimplementedError('setZoomLevel() is not implemented.');
+  }
+
+  /// Pause the active preview on the current frame for the selected camera.
+  Future<void> pausePreview(int cameraId) {
+    throw UnimplementedError('pausePreview() is not implemented.');
+  }
+
+  /// Resume the paused preview for the selected camera.
+  Future<void> resumePreview(int cameraId) {
+    throw UnimplementedError('pausePreview() is not implemented.');
   }
 
   /// Returns a widget showing a live camera preview.
